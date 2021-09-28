@@ -27,7 +27,7 @@
         <q-separator class="q-mt-md"/>
   <div class="row justify-center text-h2 q-mt-lg text-pink-10">
 
-    <strong>Produtos:</strong>
+    <strong>Produto:</strong>
   
   </div>
 
