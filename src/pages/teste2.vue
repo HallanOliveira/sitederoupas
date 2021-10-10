@@ -12,7 +12,7 @@
      :key="index" 
      row-key="post.id"
      >
-      <q-img class="girar" :src="post.url">
+      <q-img :src="post.url">
         <div class="absolute-bottom">
           <div class="text-h6">ID: {{ post.id }}<br> Cont: {{index}}</div>
           <div class="text-subtitle2">{{ post.title }}</div>
@@ -47,9 +47,9 @@
  </template>
 
 <script>
-
+import api from "../services/api"
 export default {
-  name: 'Page4',
+  name: 'teste2',
   data () {
      return { 
       current: 1,
@@ -66,20 +66,20 @@ export default {
   },
 
   mounted(){
-    this.getPosts ()
-
+   this.getPosts ()
   },
  
 
   methods:{
-    getPosts (){
-      this.$axios.get ('https://jsonplaceholder.typicode.com/photos')
+       getPosts (){
+      api.get ()
       .then((res) => {
         this.posts = res.data
            })
       .catch((err) => {
         console.log(err)
       })
+    
     },
 
 paginar (){
