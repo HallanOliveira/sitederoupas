@@ -56,7 +56,7 @@
        
    <div class="row justify-evenly">
 
-      <q-item class="q-mx-xl" clickable v-ripple to="/index">
+      <q-item class="q-mx-xl" clickable v-ripple to="/~">
         <q-item-section><strong>Inicio</strong></q-item-section>
       </q-item>
 <q-separator vertical inset />

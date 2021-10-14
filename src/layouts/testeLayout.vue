@@ -1,5 +1,4 @@
 <template id='apppage2'>
-
   <q-layout view="hhh lpR lFf">
 
     <q-header elevated class="bg-accent text-white ">
@@ -55,7 +54,7 @@
        
     <div class="row justify-evenly">
 
-      <q-item class="q-mx-xl" clickable v-ripple to="/index">
+      <q-item class="q-mx-xl" clickable v-ripple to="/~">
         <q-item-section><strong>Inicio</strong></q-item-section>
       </q-item>
 <q-separator vertical inset />
