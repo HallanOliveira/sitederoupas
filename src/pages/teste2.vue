@@ -1,16 +1,11 @@
 <template>
   <q-page>
     <div>
-      <p class="row text-h2 justify-center q-mt-lg q-mb-lg text-pink-10">
-        <strong>Estoque</strong>
-      </p>
-      <q-separator class="q-mb-xl" />
-      <div class="row items-center justify-center">
-        
+      <div class="row justify-center">
         <!--cards for desktop-->
         <q-card
           id="estoque"
-          class="my-card col-3 desktop-only"
+          class="my-card col-3 desktop-only q-ma-md"
           v-for="(post, index) of posts.slice(v1, v2)"
           :key="index"
           row-key="post.id">
@@ -24,22 +19,13 @@
               <div class="text-subtitle2">{{ post.title }}</div>
             </div>
           </q-img>
-
-          <q-card-actions class="row justify-around">
-            <q-btn flat>ver mais</q-btn>
-            <q-separator vertical />
-            <q-btn
-              type="a"
-              href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0"
-              target="_blank"
-              id="btn1"
-              class="bg-green-6 glossy text-white shadow-3"
-            >
-              <img class="q-mr-sm" id="wpp" v-bind:src="iconwpp" />
-              Whatsapp
-            </q-btn>
-          </q-card-actions>
+          <div class="row">
+            <q-card-actions class="col-12 justify-center">
+              <q-btn class="col-12" flat>ver mais</q-btn>
+            </q-card-actions>
+          </div>
         </q-card>
+        
         <!--cards for mobile-->
         <q-card
           id="estoque"

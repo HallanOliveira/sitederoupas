@@ -3,15 +3,15 @@
   <q-layout view="hHh Lpr lff">
     <!--Menu Desktop-->
     <q-header elevated class="bg-accent text-white desktop-only">
-      <q-toolbar class="q-pt-none q-pl-xl glossy"> 
-        <div class="classe1">MH Modas</div> 
-        <div id="inp" class="row">
+      <q-toolbar class="q-pt-none glossy"> 
+        <div class="text-h4 col-3">MH2 Modas</div> 
+        <div class="col-5 row justify-center" >
           <q-input 
             dense
             bg-color="grey-4"
             color="black"
-            class="q-ml-lg" 
             label="Digite aqui o você que procura:"  
+            class="col-8"
             rounded 
             outlined
             v-model="buscar">
@@ -21,21 +21,10 @@
             </template>
           </q-input>
           <q-separator vertical inset class="q-ml-sm"/>
-          <q-btn push dense label="Buscar" class="glossy q-ml-sm" size="15px"/>
+          <q-btn push dense label="Buscar" class="glossy q-ml-sm col-2 " size="15px"/>
         </div>
-
-        <div id="divbtn1" class="row" align="right">
-          <q-btn flat icon="help"/>
-          <q-separator vertical/>
-          <q-btn 
-            type="a" 
-            href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0" 
-            target="_blank" 
-            id="btn1" 
-            class="bg-green-6 glossy text-white q-ml-md shadow-3">
-            <img class="q-mr-sm" id="wpp" v-bind:src="iconwpp" />
-              Whatsapp
-          </q-btn>
+        <div class="col-4" align="right">
+          <q-btn class="on-right" flat icon="help"/>
         </div>
       </q-toolbar>
       <div id="id1" class="text-h5 bg-white shadow-10">
@@ -68,7 +57,7 @@
     <!--Menu Mobile-->
      <q-header elevated class="bg-accent text-white mobile-only">
       <q-toolbar class="q-pt-none q-pl-xl glossy"> 
-        <div class="col-4 text-h6 cursor-pointer" align="left">MH Modas</div>
+        <div class="col-4 text-h6 cursor-pointer" align="left">MH2 Modas</div>
         <div class="col-8" align="right">
           <q-btn flat icon="menu">
             <q-menu>
@@ -93,17 +82,21 @@
           </q-btn>
         </div>
       </q-toolbar>
-    </q-header>
-               
-
+    </q-header>    
+    <q-btn 
+      type="a" 
+      href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0" 
+      target="_blank" 
+      id="btn-float"
+      size="20px"
+      round 
+      class="bg-green-6 glossy text-white q-ml-md shadow-3 fixed-bottom-right q-ma-md">
+      <img id="wpp" v-bind:src="iconwpp" />
+    </q-btn>
     <q-page-container id="page1">
-
       <router-view />
-
     </q-page-container>
-
-  </q-layout>
-  
+  </q-layout> 
 </template>
 
 <script>
