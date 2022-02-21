@@ -1,79 +1,98 @@
 
 <template id='apppage'>
-
-  <q-layout view="hhh LpR fFf">
-
-    <q-header elevated class="bg-accent text-white ">
+  <q-layout view="hHh Lpr lff">
+    <!--Menu Desktop-->
+    <q-header elevated class="bg-accent text-white desktop-only">
       <q-toolbar class="q-pt-none q-pl-xl glossy"> 
-               
-        
-          <div class="classe1">             
-          MH Modas
-          </div>   
-
-
-  <div id="inp" align="" class="row">
-            <q-input 
+        <div class="classe1">MH Modas</div> 
+        <div id="inp" class="row">
+          <q-input 
             dense
-             bg-color="grey-4"
-              color="black"
-               class="q-ml-lg" 
-               label="Digite aqui o você que procura:"  
-               rounded 
-               outlined
-                v-model="buscar">
-              
-        <template v-slot:append>
-          <q-avatar icon="search">
-          </q-avatar>
-          
-        </template>
-        
-      </q-input>
-      
-      <q-separator vertical inset class="q-ml-sm"/>
-    
-      <q-btn
-       push
-      
-        dense 
-        label="Buscar"
-         class="glossy q-ml-sm"
-          size="15px"/>
-</div>
+            bg-color="grey-4"
+            color="black"
+            class="q-ml-lg" 
+            label="Digite aqui o você que procura:"  
+            rounded 
+            outlined
+            v-model="buscar">
+            <template v-slot:append>
+              <q-avatar icon="search">
+              </q-avatar>
+            </template>
+          </q-input>
+          <q-separator vertical inset class="q-ml-sm"/>
+          <q-btn push dense label="Buscar" class="glossy q-ml-sm" size="15px"/>
+        </div>
 
-<div id="divbtn1" class="row" align="right">
-  <q-btn flat icon="help"/>
-        <q-separator vertical/>
-<q-btn type="a" href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0" target="_blank" id="btn1" class="bg-green-6 glossy text-white q-ml-md shadow-3">
-          <img class="q-mr-sm" id="wpp" v-bind:src="iconwpp" />
-          Whatsapp
-        </q-btn>
-     </div>
+        <div id="divbtn1" class="row" align="right">
+          <q-btn flat icon="help"/>
+          <q-separator vertical/>
+          <q-btn 
+            type="a" 
+            href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0" 
+            target="_blank" 
+            id="btn1" 
+            class="bg-green-6 glossy text-white q-ml-md shadow-3">
+            <img class="q-mr-sm" id="wpp" v-bind:src="iconwpp" />
+              Whatsapp
+          </q-btn>
+        </div>
       </q-toolbar>
-      
-<div id="id1" class="text-h5 bg-white shadow-10">
-       
-   <div class="row justify-evenly">
+      <div id="id1" class="text-h5 bg-white shadow-10">
+        <div class="row justify-evenly ">
+          <q-item class="q-mx-xl" clickable v-ripple to="/~">
+            <q-item-section><strong>Inicio</strong></q-item-section>
+          </q-item>
 
-      <q-item class="q-mx-xl" clickable v-ripple to="/~">
-        <q-item-section><strong>Inicio</strong></q-item-section>
-      </q-item>
-<q-separator vertical inset />
-      <q-item class="q-mx-xl" clickable v-ripple to="/estoque/teste2">
-        <q-item-section><strong>Estoque</strong></q-item-section>
-      </q-item>
-      <q-separator vertical inset />
-<q-item class="q-mx-xl" clickable v-ripple to="/teste3">
-        <q-item-section><strong>Contato</strong></q-item-section>
-       </q-item>
-<q-separator vertical inset />
-       <q-item class="q-mx-xl" clickable v-ripple to="/teste4">
-        <q-item-section><strong>Empresa</strong></q-item-section>
-       </q-item>
-                     
-    </div>
-  </div>
+          <q-separator vertical inset />
+
+          <q-item class="q-mx-xl" clickable v-ripple to="/estoque/teste2">
+            <q-item-section><strong>Estoque</strong></q-item-section>
+          </q-item>
+
+          <q-separator vertical inset />
+
+          <q-item class="q-mx-xl" clickable v-ripple to="/teste3">
+            <q-item-section><strong>Contato</strong></q-item-section>
+           </q-item>
+
+          <q-separator vertical inset />
+
+           <q-item class="q-mx-xl" clickable v-ripple to="/teste4">
+            <q-item-section><strong>Empresa</strong></q-item-section>
+           </q-item>               
+        </div>
+      </div>
+    </q-header>
+
+    <!--Menu Mobile-->
+     <q-header elevated class="bg-accent text-white mobile-only">
+      <q-toolbar class="q-pt-none q-pl-xl glossy"> 
+        <div class="col-4 text-h6 cursor-pointer" align="left">MH Modas</div>
+        <div class="col-8" align="right">
+          <q-btn flat icon="menu">
+            <q-menu>
+              <q-list style="min-width: 200px">
+                <q-item v-close-popup clickable to="/~">
+                  <q-item-section><strong>Inicio</strong></q-item-section>
+                </q-item>
+
+                <q-item v-close-popup clickable to="/estoque/teste2">
+                  <q-item-section><strong>Estoque</strong></q-item-section>
+                </q-item>
+
+                <q-item v-close-popup clickable to="/teste3">
+                  <q-item-section><strong>Contato</strong></q-item-section>
+                </q-item>
+
+                <q-item v-close-popup clickable to="/teste4">
+                  <q-item-section><strong>Empresa</strong></q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
+        </div>
+      </q-toolbar>
     </q-header>
                
 

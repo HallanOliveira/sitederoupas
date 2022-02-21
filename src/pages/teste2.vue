@@ -5,10 +5,45 @@
         <strong>Estoque</strong>
       </p>
       <q-separator class="q-mb-xl" />
-      <div class="row q-ma-lg justify-around">
+      <div class="row items-center justify-center">
+        
+        <!--cards for desktop-->
         <q-card
           id="estoque"
-          class="my-card"
+          class="my-card col-3 desktop-only"
+          v-for="(post, index) of posts.slice(v1, v2)"
+          :key="index"
+          row-key="post.id">
+          <q-img :src="post.url">
+            <div class="absolute-bottom">
+              <div class="text-h6">
+                ID: {{ post.id }}
+                <br />
+                Cont: {{ index }}
+              </div>
+              <div class="text-subtitle2">{{ post.title }}</div>
+            </div>
+          </q-img>
+
+          <q-card-actions class="row justify-around">
+            <q-btn flat>ver mais</q-btn>
+            <q-separator vertical />
+            <q-btn
+              type="a"
+              href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0"
+              target="_blank"
+              id="btn1"
+              class="bg-green-6 glossy text-white shadow-3"
+            >
+              <img class="q-mr-sm" id="wpp" v-bind:src="iconwpp" />
+              Whatsapp
+            </q-btn>
+          </q-card-actions>
+        </q-card>
+        <!--cards for mobile-->
+        <q-card
+          id="estoque"
+          class="my-card mobile-only"
           v-for="(post, index) of posts.slice(v1, v2)"
           :key="index"
           row-key="post.id"
@@ -16,7 +51,8 @@
           <q-img :src="post.url">
             <div class="absolute-bottom">
               <div class="text-h6">
-                ID: {{ post.id }}<br />
+                ID: {{ post.id }}
+                <br />
                 Cont: {{ index }}
               </div>
               <div class="text-subtitle2">{{ post.title }}</div>
@@ -81,9 +117,7 @@ export default {
 
   methods: {
     getPosts() {
-      api
-        .get()
-        .then((res) => {
+      api.get().then((res) => {
           this.posts = res.data;
         })
         .catch((err) => {
