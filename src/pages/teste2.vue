@@ -1,11 +1,24 @@
 <template>
   <q-page>
-    <div>
-      <div class="row justify-center">
+    <!-- SideBar filters Lateral -->
+    <div class="row">
+      <q-drawer class="mobile-hide" show-if-above v-model="leftDrawerOpen" side="left" bordered>
+        filters
+        filters
+        filters
+        filters
+        filters
+        filters
+      </q-drawer>
+    <div class="col-12">
+      <p class="q-ml-lg q-mt-lg text-h4">Bolsas:</p>
+      <q-separator class="q-mr-lg q-ml-lg"/>
+    </div>
+      <div class="row col-12 justify-around">
         <!--cards for desktop-->
         <q-card
           id="estoque"
-          class="my-card col-3 desktop-only q-ma-md"
+          class="my-card col-5 desktop-only q-ma-lg"
           v-for="(post, index) of posts.slice(v1, v2)"
           :key="index"
           row-key="post.id">
@@ -61,6 +74,8 @@
           </q-card-actions>
         </q-card>
       </div>
+    </div>
+    
       <q-separator class="q-mb-md" />
 
       <div class="row justify-center q-pb-lg">

@@ -57,8 +57,8 @@
     <!--Menu Mobile-->
      <q-header elevated class="bg-accent text-white mobile-only">
       <q-toolbar class="q-pt-none q-pl-xl glossy"> 
-        <div class="col-4 text-h6 cursor-pointer" align="left">MH2 Modas</div>
-        <div class="col-8" align="right">
+        <div class="col-5 text-h6 cursor-pointer" align="left">MH2 Modas</div>
+        <div class="col-7" align="right">
           <q-btn flat icon="menu">
             <q-menu>
               <q-list style="min-width: 200px">
@@ -85,6 +85,7 @@
     </q-header>    
     <q-btn 
       type="a" 
+      title="Contato"
       href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0" 
       target="_blank" 
       id="btn-float"
@@ -93,7 +94,7 @@
       class="bg-green-6 glossy text-white q-ml-md shadow-3 fixed-bottom-right q-ma-md">
       <img id="wpp" v-bind:src="iconwpp" />
     </q-btn>
-    <q-page-container id="page1">
+    <q-page-container class="page1">
       <router-view />
     </q-page-container>
   </q-layout> 
