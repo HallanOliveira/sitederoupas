@@ -89,7 +89,7 @@
       href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0" 
       target="_blank" 
       id="btn-float"
-      size="20px"
+      size="16px"
       round 
       class="bg-green-6 glossy text-white q-ml-md shadow-3 fixed-bottom-right q-ma-md">
       <img id="wpp" v-bind:src="iconwpp" />

@@ -2,7 +2,7 @@
   <q-page>
     <!-- SideBar filters Lateral -->
     <div class="row">
-      <q-drawer class="mobile-hide" show-if-above v-model="leftDrawerOpen" side="left" bordered>
+      <q-drawer class="desktop-only" show-if-above v-model="leftDrawerOpen" side="left" bordered>
         filters
         filters
         filters
@@ -42,7 +42,7 @@
         <!--cards for mobile-->
         <q-card
           id="estoque"
-          class="my-card mobile-only"
+          class="my-card my-card col-10 q-ma-lg mobile-only"
           v-for="(post, index) of posts.slice(v1, v2)"
           :key="index"
           row-key="post.id"
@@ -58,19 +58,8 @@
             </div>
           </q-img>
 
-          <q-card-actions class="row justify-around">
+          <q-card-actions class="row">
             <q-btn flat>ver mais</q-btn>
-            <q-separator vertical />
-            <q-btn
-              type="a"
-              href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0"
-              target="_blank"
-              id="btn1"
-              class="bg-green-6 glossy text-white shadow-3"
-            >
-              <img class="q-mr-sm" id="wpp" v-bind:src="iconwpp" />
-              Whatsapp
-            </q-btn>
           </q-card-actions>
         </q-card>
       </div>
@@ -88,7 +77,6 @@
           boundary-links
         />
       </div>
-    </div>
   </q-page>
 </template>
 
