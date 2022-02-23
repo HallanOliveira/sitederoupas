@@ -35,7 +35,7 @@
 
           <q-separator vertical inset />
 
-          <q-item class="q-mx-xl" clickable v-ripple to="/estoque/teste2">
+          <q-item class="q-mx-xl" clickable v-ripple to="/teste2">
             <q-item-section><strong>Estoque</strong></q-item-section>
           </q-item>
 
@@ -66,7 +66,7 @@
                   <q-item-section><strong>Inicio</strong></q-item-section>
                 </q-item>
 
-                <q-item v-close-popup clickable to="/estoque/teste2">
+                <q-item v-close-popup clickable to="/teste2">
                   <q-item-section><strong>Estoque</strong></q-item-section>
                 </q-item>
 

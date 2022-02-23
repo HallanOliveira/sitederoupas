@@ -2,19 +2,16 @@
   <q-page>
     <!-- SideBar filters Lateral -->
     <div class="row">
-      <q-drawer class="desktop-only" show-if-above v-model="leftDrawerOpen" side="left" bordered>
-        filters
-        filters
-        filters
-        filters
-        filters
-        filters
-      </q-drawer>
-    <div class="col-12">
-      <p class="q-ml-lg q-mt-lg text-h4">Bolsas:</p>
-      <q-separator class="q-mr-lg q-ml-lg"/>
-    </div>
-      <div class="row col-12 justify-around">
+      <div class="col-3 desktop-only" side="left">
+      <div>teste</div>
+      <div>teste</div>
+      <div>teste</div>
+      </div>
+      <div class="col-2">
+        <p class="q-ml-lg q-mt-lg text-h4">Bolsas:</p>
+        <q-separator class="q-mr-lg q-ml-lg"/>
+      </div>
+      <div class="row col-8 justify-around">
         <!--cards for desktop-->
         <q-card
           id="estoque"
@@ -77,6 +74,7 @@
           boundary-links
         />
       </div>
+
   </q-page>
 </template>
 
