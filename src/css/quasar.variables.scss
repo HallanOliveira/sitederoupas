@@ -12,15 +12,18 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #1976D2;
+$primary   : rgb(255, 255, 255);
 $secondary : #26A69A;
 $accent    : rgb(192, 95, 209);
-$title1: rgb(255, 255, 255);
-
 $dark      : #1D1D1D;
 
 $positive  : #21BA45;
 $negative  : #C10015;
 $info      : #31CCEC;
 $warning   : #F2C037;
-$paginabg  : rgb(255, 181, 238);
+
+//custom colors
+$purple              : #44006e;
+$gold                : rgb(246, 185, 18);
+$background-general  : rgb(228, 215, 225);
+$background-filters  : rgb(255, 255, 255);

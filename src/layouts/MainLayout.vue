@@ -2,17 +2,15 @@
 <template id='apppage'>
   <q-layout view="hHh Lpr lff">
     <!--Menu Desktop-->
-    <q-header elevated class="bg-accent text-white desktop-only">
-      <q-toolbar class="q-pt-none glossy"> 
-        <div class="text-h4 col-3">MH2 Modas</div> 
-        <div class="col-5 row justify-center" >
+    <q-header elevated class="text-white desktop-only">
+      <q-toolbar class="toolBarTop"> 
+        <div class="text-h4 col-4"><q-img src="../img/logo.jpg" spinner-color="white" style="height: 123px; max-width: 300px"/></div> 
+        <div class="col-4 row justify-center" >
           <q-input 
-            dense
-            bg-color="grey-4"
+            bg-color="white"
             color="black"
             label="Digite aqui o você que procura:"  
             class="col-8"
-            rounded 
             outlined
             v-model="buscar">
             <template v-slot:append>
@@ -21,14 +19,14 @@
             </template>
           </q-input>
           <q-separator vertical inset class="q-ml-sm"/>
-          <q-btn push dense label="Buscar" class="glossy q-ml-sm col-2 " size="15px"/>
+          <q-btn push label="Buscar" class="q-ml-sm col-3 bg-white text-black glossy" size="18px"/>
         </div>
         <div class="col-4" align="right">
           <q-btn class="on-right" flat icon="help"/>
         </div>
       </q-toolbar>
-      <div id="id1" class="text-h5 bg-white shadow-10">
-        <div class="row justify-evenly ">
+      <div id="id1" class="text-h5 menu shadow-10">
+        <div class="row justify-evenly vertical-middle">
           <q-item class="q-mx-xl" clickable v-ripple to="/~">
             <q-item-section><strong>Inicio</strong></q-item-section>
           </q-item>
@@ -94,7 +92,7 @@
       class="bg-green-6 glossy text-white q-ml-md shadow-3 fixed-bottom-right q-ma-md">
       <img id="wpp" v-bind:src="iconwpp" />
     </q-btn>
-    <q-page-container class="page1">
+    <q-page-container class="default">
       <router-view />
     </q-page-container>
   </q-layout> 

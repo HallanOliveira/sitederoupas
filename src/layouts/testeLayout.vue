@@ -5,7 +5,7 @@
       <q-toolbar class="q-pt-none q-pl-xl glossy"> 
                
         
-          <div class="classe1">             
+          <div class="default">             
           MH Modas
           </div>   
 
@@ -79,7 +79,7 @@
      <div>
 
 </div>
-    <q-page-container id="page1">
+    <q-page-container id="default">
 
       <router-view />
 
