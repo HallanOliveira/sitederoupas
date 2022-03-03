@@ -8,7 +8,7 @@ q-avatar {
 }
 .toolBarTop{    
     background-color: $purple;
-    height: 123px;
+    height: 130px;
 }
 .menu{
     background-color: $gold;
@@ -16,6 +16,7 @@ q-avatar {
 .side-filter{
     background-color: $background-filters;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    box-shadow: 3px 3px 3px grey;;
 }
 div#id1 {
     color: black;
@@ -45,10 +46,6 @@ height: 400px
   max-width: 350px;
   
 }
-.my-card:hover {
-    box-shadow: 1px 1px 5px 5px grey;
-}
-
 .q-input{
     width: 30%;
     
@@ -102,4 +99,7 @@ background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3
 }
 .btn-social{
     padding: 20px 20px;
+}
+.label{
+    font-size: 16px;
 }

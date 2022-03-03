@@ -4,7 +4,7 @@
     <!--Menu Desktop-->
     <q-header elevated class="text-white desktop-only">
       <q-toolbar class="toolBarTop"> 
-        <div class="text-h4 col-4"><q-img src="../img/logo.jpg" spinner-color="white" style="height: 123px; max-width: 300px"/></div> 
+        <div class="text-h4 col-4 q-ml-xl"><a href="/#/~"><q-img src="../img/bombaster2.png" spinner-color="white" style="height: 123px; max-width: 200px"/></a></div> 
         <div class="col-4 row justify-center" >
           <q-input 
             bg-color="white"
@@ -21,11 +21,8 @@
           <q-separator vertical inset class="q-ml-sm"/>
           <q-btn push label="Buscar" class="q-ml-sm col-3 bg-white text-black glossy" size="18px"/>
         </div>
-        <div class="col-4" align="right">
-          <q-btn class="on-right" flat icon="help"/>
-        </div>
       </q-toolbar>
-      <div id="id1" class="text-h5 menu shadow-10">
+      <div id="id1" class="text-h5 menu shadow-2">
         <div class="row justify-evenly vertical-middle">
           <q-item class="q-mx-xl" clickable v-ripple to="/~">
             <q-item-section><strong>Inicio</strong></q-item-section>

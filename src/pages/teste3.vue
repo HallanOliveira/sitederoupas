@@ -6,7 +6,7 @@
         <q-form
           @submit.prevent="simulateSubmit"
           @submit="onSubmit"
-          class="row justify-around q-col-gutter-lg q-px-lg"
+          class="row q-col-gutter-lg q-px-lg"
           :for="url_form">
           <p class="row text-h4">Fale conosco:</p>
           <q-input
@@ -86,9 +86,9 @@
             label="Aceito receber mensagens no Whatsapp."
             v-model="Zapzap"
             val="green"
-            class="text-h6"
+            class="label col-12"
           />
-          <div class="row justify-end">
+          <div class="row">
             <q-btn
               type="submit"
               :loading="submitting"
@@ -111,8 +111,8 @@
           <q-btn
             type="a"
             target="_blank"
-            href="https://facebook.com"
-            class="text-h6 shadow-20"
+            href="https://www.facebook.com/marlanmodas/?ref=pages_you_manage"
+            class="text-h6 bg-grey-4 shadow-6"
             style="width: 50%"
           >
             <q-img
@@ -127,8 +127,8 @@
           <q-btn
             type="a"
             target="_blank"
-            href="https://instagram.com"
-            class="text-h6 shadow-20 vertical-middle"
+            href="https://www.instagram.com/mh2modas/"
+            class="text-h6 bg-grey-4 shadow-6"
             style="width: 50%"
           >
             <q-img
@@ -143,7 +143,7 @@
             type="a"
             target="_blank"
             href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0.com"
-            class="text-h6 shadow-20"
+            class="text-h6 bg-grey-4 shadow-6"
             style="width: 50%"
           >
             <q-img
