@@ -7,11 +7,11 @@ q-avatar {
     font-size: 28pt;
 }
 .toolBarTop{    
-    background-color: $purple;
+    background-color: $gold;
     height: 130px;
 }
 .menu{
-    background-color: $gold;
+    background-color:$purple;
 }
 .side-filter{
     background-color: $background-filters;
@@ -21,7 +21,11 @@ q-avatar {
 div#id1 {
     color: black;
     font-size: 18pt;
-    font: sans-serif	
+    font: sans-serif;
+    color: $gold;
+}
+.separator-menu{
+    background-color: $gold;
 }
 #pagina{
     width: 100%;

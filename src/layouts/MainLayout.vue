@@ -28,19 +28,19 @@
             <q-item-section><strong>Inicio</strong></q-item-section>
           </q-item>
 
-          <q-separator vertical inset />
+          <q-separator vertical inset class="separator-menu"/>
 
           <q-item class="q-mx-xl" clickable v-ripple to="/teste2">
             <q-item-section><strong>Estoque</strong></q-item-section>
           </q-item>
 
-          <q-separator vertical inset />
+          <q-separator vertical inset class="separator-menu"/>
 
           <q-item class="q-mx-xl" clickable v-ripple to="/teste3">
             <q-item-section><strong>Contato</strong></q-item-section>
            </q-item>
 
-          <q-separator vertical inset />
+          <q-separator vertical inset class="separator-menu"/>
 
            <q-item class="q-mx-xl" clickable v-ripple to="/teste4">
             <q-item-section><strong>Empresa</strong></q-item-section>
