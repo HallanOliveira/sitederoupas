@@ -1,13 +1,13 @@
 <template>
 <q-layout>
  <q-page-container>
-    <div class="row q-mt-lgs">
+    <div class="row q-pt-xl">
       <div class="col" style="width: 50%">
         <q-form
           @submit.prevent="simulateSubmit"
           @submit="onSubmit"
           class="row justify-around q-col-gutter-lg q-px-lg"
-        >
+          :for="url_form">
           <p class="row text-h4">Fale conosco:</p>
           <q-input
             name="Nome"
@@ -86,6 +86,7 @@
             label="Aceito receber mensagens no Whatsapp."
             v-model="Zapzap"
             val="green"
+            class="text-h6"
           />
           <div class="row justify-end">
             <q-btn
@@ -104,16 +105,15 @@
         </q-form>
       </div>
 
-      <div id="social" style="width: 49%" align="center" class="col q-px-lg">
+      <div id="social" class="col ">
         <p class="text-h4">Redes sociais:</p>
-        <q-separator color="black" />
-        <div>
+        <div class="btn-social">
           <q-btn
             type="a"
             target="_blank"
             href="https://facebook.com"
-            class="text-h6 bg-blue-4 shadow-20 q-mt-xl"
-            style="width: 300px"
+            class="text-h6 shadow-20"
+            style="width: 50%"
           >
             <q-img
               class="q-mr-sm"
@@ -123,14 +123,13 @@
             Facebook</q-btn
           >
         </div>
-        <q-separator class="q-mt-xl" />
-        <div>
+        <div class="btn-social">
           <q-btn
             type="a"
             target="_blank"
             href="https://instagram.com"
-            class="text-h6 bg-red-5 shadow-20 q-mt-xl"
-            style="width: 300px"
+            class="text-h6 shadow-20 vertical-middle"
+            style="width: 50%"
           >
             <q-img
               class="q-mr-sm"
@@ -139,14 +138,13 @@
             />Instagram</q-btn
           >
         </div>
-        <q-separator class="q-mt-xl" />
-        <div>
+        <div class="btn-social">
           <q-btn
             type="a"
             target="_blank"
             href="https://api.whatsapp.com/send/?phone=5541997867176&text&app_absent=0.com"
-            class="text-h6 bg-green-3 shadow-20 q-mt-xl"
-            style="width: 300px"
+            class="text-h6 shadow-20"
+            style="width: 50%"
           >
             <q-img
               class="q-mr-sm"
@@ -161,7 +159,7 @@
       <a
         href="https://google.com"
         target="_blank"
-        class="absolute-bottom text-grey-7 q-mb-sm"
+        class="absolute-bottom text-grey-7 q-mb-sm rodape"
         align="center"
         >Termos de política e privacidade</a
       >
@@ -185,6 +183,7 @@ export default {
       submitting: false,
       test: "",
       Zapzap: false,
+      url_form: "https://revendamais.com.br",
     };
   },
 
