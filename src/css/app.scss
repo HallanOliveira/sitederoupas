@@ -36,8 +36,8 @@ div#id1 {
     height: 700px
 }
 .q-card{
-width: 300px;
-height: 400px
+    min-width: 250px;
+    height: 100%;
 }
 
 .title{
@@ -52,8 +52,11 @@ height: 400px
 }
 .q-input{
     width: 30%;
-    
-
+}
+.category-card{
+    max-width: 300px;
+    max-height: 20%;
+    padding: 10px 10px;
 }
 .example-item {
     height: 100px;
