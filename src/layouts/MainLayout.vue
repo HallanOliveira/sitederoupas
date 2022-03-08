@@ -4,7 +4,11 @@
     <!--Menu Desktop-->
     <q-header elevated class="text-white gt-sm">
       <q-toolbar class="toolBarTop"> 
-        <div class="text-h4 col-4 q-ml-xl"><a href="/#/~"><q-img src="../img/bombaster2.png" spinner-color="white" style="height: 123px; max-width: 200px"/></a></div> 
+        <div class="text-h4 col-4 q-ml-xl">
+          <a href="/#/~">
+            <q-img src="../img/bombaster2.png" spinner-color="white" style="height: 123px; max-width: 200px"/>
+          </a>
+        </div> 
         <div class="col-4 row justify-center" >
           <q-input 
             bg-color="white"
@@ -56,7 +60,7 @@
         <div class="col-7" align="right">
           <q-btn flat icon="menu">
             <q-menu>
-              <q-list style="min-width: 200px">
+              <q-list class="menu-mobile">
                 <q-item v-close-popup clickable to="/~">
                   <q-item-section><strong>Inicio</strong></q-item-section>
                 </q-item>

@@ -27,7 +27,7 @@
       <strong>Nossos produtos:</strong>
     </div>
 
-    <div class="row justify-around q-mt-lg" align="center">
+    <div class="justify-around flex q-mt-lg">
       <div class="category-card">
         <q-card class="my-card shadow-10">
           <q-card-section>

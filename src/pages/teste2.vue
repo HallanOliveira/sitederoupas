@@ -18,11 +18,12 @@
           />
         </div>
       </div>
-      <div class="row col-10 justify-center">
-        <!--cards for desktop-->
+
+      <!--cards for desktop-->
+      <div class="row col-10 justify-center gt-sm">
         <q-card
           id="estoque"
-          class="my-card col-3 q-ma-lg"
+          class="my-card col-md-3 col-lg-4 q-ma-lg"
           v-for="(post, index) of posts.slice(v1, v2)"
           :key="index"
           row-key="post.id">
@@ -43,33 +44,33 @@
           </div>
         </q-card>
         </div>
-        <div class="row col-12 justify-center mobile-only">
+
         <!--cards for mobile-->
-        <q-card
-          id="estoque"
-          class="my-card q-ma-lg"
-          v-for="(post, index) of posts.slice(v1, v2)"
-          :key="index"
-          row-key="post.id"
-        >
-          <q-img :src="post.url">
-            <div class="absolute-bottom">
-              <div class="text-h6">
-                ID: {{ post.id }}
-                <br />
-                Cont: {{ index }}
+        <div class="row col-12 justify-center lt-md">
+          <q-card
+            id="estoque"
+            class="my-card col-12 q-ma-lg"
+            v-for="(post, index) of posts.slice(v1, v2)"
+            :key="index"
+            row-key="post.id">
+            <q-img :src="post.url">
+              <div class="absolute-bottom">
+                <div class="text-h6">
+                  ID: {{ post.id }}
+                  <br />
+                  Cont: {{ index }}
+                </div>
+                <div class="text-subtitle2">{{ post.title }}</div>
               </div>
-              <div class="text-subtitle2">{{ post.title }}</div>
+            </q-img>
+            <div>
+              <q-card-actions class="col-12 justify-center">
+                <q-btn flat>ver mais</q-btn>
+              </q-card-actions>
             </div>
-          </q-img>
-          <div>
-            <q-card-actions class="col-12 justify-center">
-              <q-btn flat>ver mais</q-btn>
-            </q-card-actions>
-          </div>
-        </q-card>
+          </q-card>
+        </div>
       </div>
-    </div>
     
       <q-separator class="q-mb-md" />
 

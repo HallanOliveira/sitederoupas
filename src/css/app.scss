@@ -6,6 +6,12 @@ q-avatar {
     background-color: $background-general;
     font-size: 28pt;
 }
+.menu-mobile{
+    min-width: 200px;
+}
+.q-item.q-router-link--active > .menu-mobile{
+    color: pink;
+}
 .toolBarTop{    
     background-color: $gold;
     height: 130px;
@@ -53,7 +59,7 @@ div#id1 {
     width: 30%;
 }
 .category-card{
-    max-width: 300px;
+    max-width: 400px;
     max-height: 20%;
     padding: 10px 10px;
 }
