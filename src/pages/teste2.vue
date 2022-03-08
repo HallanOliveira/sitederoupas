@@ -2,7 +2,7 @@
   <q-page>
     <!-- SideBar filters Lateral -->
     <div class="row">
-      <div class="side-filter col-2 desktop-only">
+      <div class="side-filter col-2 gt-sm">
         <div class="text-h4 text-black text-center q-mt-md">Filtros:</div>
         <div class="q-pa-lg">
           <q-input v-model="text" filled autogrow label="Busque por descrição:" color="black" class="q-mb-lg">
@@ -18,7 +18,7 @@
           />
         </div>
       </div>
-      <div class="row col-10 justify-center desktop-only">
+      <div class="row col-10 justify-center">
         <!--cards for desktop-->
         <q-card
           id="estoque"

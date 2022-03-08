@@ -2,7 +2,7 @@
 <template id='apppage'>
   <q-layout view="hHh Lpr lff">
     <!--Menu Desktop-->
-    <q-header elevated class="text-white desktop-only">
+    <q-header elevated class="text-white gt-sm">
       <q-toolbar class="toolBarTop"> 
         <div class="text-h4 col-4 q-ml-xl"><a href="/#/~"><q-img src="../img/bombaster2.png" spinner-color="white" style="height: 123px; max-width: 200px"/></a></div> 
         <div class="col-4 row justify-center" >
@@ -50,7 +50,7 @@
     </q-header>
 
     <!--Menu Mobile-->
-     <q-header elevated class="bg-accent text-white mobile-only">
+     <q-header elevated class="bg-accent text-white lt-md">
       <q-toolbar class="q-pt-none q-pl-xl glossy"> 
         <div class="col-5 text-h6 cursor-pointer" align="left">MH2 Modas</div>
         <div class="col-7" align="right">

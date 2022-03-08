@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="desktop-only">
+    <div class="gt-sm">
       <q-carousel id="carrosel1" class="shadow-5"
         animated
         v-model="slide"
