@@ -1,73 +1,79 @@
 <template>
   <div>
-     <div>
-    <div class="gt-sm">
-      <q-carousel class="shadow-5"
-        animated
-        v-model="slide"
-        navigation
-        infinite
-        :autoplay="autoplay"
-        arrows
-        transition-prev="slide-right"
-        transition-next="slide-left"
-        @mouseenter="autoplay = false"
-        @mouseleave="autoplay = true"    >
-          <q-carousel-slide :name="1" img-src="../img/banner5.jpg"/>
-          <q-carousel-slide :name="2" img-src="../img/banner6.jpg"/>
-      </q-carousel>
+    <div>
+      <div class="gt-sm">
+        <q-carousel class="shadow-5"
+          animated
+          v-model="slide"
+          navigation
+          infinite
+          :autoplay="autoplay"
+          arrows
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          @mouseenter="autoplay = false"
+          @mouseleave="autoplay = true"    >
+            <q-carousel-slide :name="1" img-src="../img/banner5.jpg"/>
+            <q-carousel-slide :name="2" img-src="../img/banner6.jpg"/>
+        </q-carousel>
+      </div>
+
+      <div class="row q-pa-lg text-h4 text-pink-10 gt-sm">
+          <div class="col-12" align="Center">
+            <q-card class="shadow-10">
+              <q-card-section>
+                <strong>Categorias:</strong>
+              </q-card-section>
+            </q-card>
+          </div>
+      </div>
+
+      <div class="row q-pa-md">
+        <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+          <q-card class="shadow-10 card">
+            <q-card-section>
+              <q-img src="../img/blusinha.jpeg"/>
+            </q-card-section>
+            <q-card-actions class="justify-center text-pink-10">
+              <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo1 }}</b></q-btn>
+            </q-card-actions>
+          </q-card>
+        </div>
+
+        <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+          <q-card class="shadow-10 card">
+            <q-card-section>
+              <q-img src="../img/calça.jpg"/>
+            </q-card-section>
+            <q-card-actions class="justify-center text-pink-10">
+              <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo2 }}</b></q-btn>
+           </q-card-actions>
+          </q-card>
+        </div>
+
+        <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+          <q-card class="shadow-10 card">
+            <q-card-section>
+              <q-img src="../img/short.jpg"/>
+            </q-card-section>
+            <q-card-actions class="justify-center text-pink-10">
+              <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo3 }}</b></q-btn>
+           </q-card-actions>
+          </q-card>
+        </div>
+
+        <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+          <q-card class="shadow-10 card">
+            <q-card-section>
+              <q-img src="../img/1528528031_1GG.webp"/>
+            </q-card-section>
+            <q-card-actions class="justify-center text-pink-10">
+              <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo4 }}</b></q-btn>
+            </q-card-actions>
+          </q-card>
+        </div>
+      </div>
     </div>
-
-    <div class="row justify-center text-h4 q-mt-lg text-pink-10">
-      <strong>Nossos produtos:</strong>
-    </div>
-
-    <div class="row q-pa-md">
-      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
-        <q-card class="shadow-10 card">
-          <q-card-section>
-            <q-img src="../img/blusinha.jpeg"/>
-          </q-card-section>
-          <q-card-actions class="justify-center text-pink-10">
-            <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo1 }}</b></q-btn>
-          </q-card-actions>
-        </q-card>
-      </div>
-
-      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
-        <q-card class="shadow-10 card">
-          <q-card-section>
-            <q-img src="../img/calça.jpg"/>
-          </q-card-section>
-          <q-card-actions class="justify-center text-pink-10">
-            <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo2 }}</b></q-btn>
-         </q-card-actions>
-        </q-card>
-      </div>
-
-      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
-        <q-card class="shadow-10 card">
-          <q-card-section>
-            <q-img src="../img/short.jpg"/>
-          </q-card-section>
-          <q-card-actions class="justify-center text-pink-10">
-            <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo3 }}</b></q-btn>
-         </q-card-actions>
-        </q-card>
-      </div>
-
-      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
-        <q-card class="shadow-10 card">
-          <q-card-section>
-            <q-img src="../img/1528528031_1GG.webp"/>
-          </q-card-section>
-          <q-card-actions class="justify-center text-pink-10">
-            <q-btn flat v-bind:to="linkprod" size="20px"><b>{{ Titulo4 }}</b></q-btn>
-          </q-card-actions>
-        </q-card>
-      </div>
-    </div>
-  </div>
   </div>
 </template>
 
