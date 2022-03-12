@@ -23,7 +23,7 @@
           </q-img>
           <div class="row">
             <q-card-actions class="col-12 justify-center">
-              <q-btn class="col-12" flat>ver mais</q-btn>
+              <q-btn class="col-12"  @click="details()" flat>ver mais</q-btn>
             </q-card-actions>
           </div>
         </q-card>
@@ -91,7 +91,6 @@ export default {
         });
 
     },
-
     //calcula o numero total de paginas de acordo com os itens da API
     getPagesNumber() {
       return parseInt(this.posts.length / 12);
@@ -103,6 +102,10 @@ export default {
       window.scrollTo(0,0);
       return pagination;
     },
+
+    details(){
+      window.location.href = "/#/teste5";
+    }
   },
 };
 
