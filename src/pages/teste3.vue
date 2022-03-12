@@ -1,77 +1,65 @@
 <template>
  <q-page>
-    <div class="row q-pt-xl">
-      <div class="col" style="width: 50%">
+    <div class="row q-pa-xl">
+      <div class="col-md-6 col-sm-12">
         <q-form
           @submit.prevent="simulateSubmit"
           @submit="onSubmit"
           class="row q-col-gutter-lg q-px-lg"
           :for="url_form">
-          <p class="row text-h4">Fale conosco:</p>
-          <q-input
-            name="Nome"
-            color="black"
-            bg-color="grey-4"
-            label-color=""
-            class="col-md-12 col-xl-12 col-sm-12"
-            label="Digite seu nome:"
-            maxlength="100"
-            :rules="[(val) => (val && val.length > 0) || 'Nome é obrigatório!']"
-            v-model="nome_contato"
-            outlined
-            :dense="dense"
-          >
+            <p class="row text-h4">Fale conosco:</p>
+            <q-input
+              name="Nome"
+              color="black"
+              bg-color="grey-4"
+              label-color=""
+              class="col-12"
+              label="Digite seu nome:"
+              maxlength="100"
+              :rules="[(val) => (val && val.length > 0) || 'Nome é obrigatório!']"
+              v-model="nome_contato"
+              outlined
+              :dense="dense">
             <template v-slot:append>
               <q-icon name="person" color="black" align="right" />
             </template>
           </q-input>
 
-          <div class="row" style="width: 50%">
-            <q-input
-              color="black"
-              bg-color="grey-4"
-              label-color="grey-7"
-              class="col-md-12 col-xl-12 col-sm-12"
-              label="Digite seu email:"
-              v-model="email_contato"
-              :rules="[
-                (val) => (val && val.length > 0) || 'Email é obrigatório!',
-              ]"
-              maxlength="100"
-              outlined
-              :dense="dense"
-            >
-              <template v-slot:append>
-                <q-icon name="mail" color="black" align="right" />
-              </template>
-            </q-input>
-          </div>
-
-          <div class="row" style="width: 50%">
-            <q-input
-              mask="(##) ##### - ####"
-              fill-mask
-              color="black"
-              bg-color="grey-4"
-              label-color="grey-7"
-              class="col-md-12 col-xl-12 col-sm-12"
-              label="Digite seu telefone:"
-              :rules="[
-                (val) => (val && val.length >= 11) || 'Telefone é obrigatório!',
-              ]"
-              v-model="telefone_contato"
-              unmasked-value
-              outlined
-              :dense="dense"
-            >
-              <template v-slot:append>
-                <q-icon name="phone" color="black" align="right" />
-              </template>
-            </q-input>
-          </div>
+          <q-input
+            color="black"
+            bg-color="grey-4"
+            label-color="grey-7"
+            class="col-md-6 col-sm-12 col-xs-12"
+            label="Digite seu email:"
+            v-model="email_contato"
+            :rules="[(val) => (val && val.length > 0) || 'Email é obrigatório!']"
+            maxlength="100"
+            outlined
+            :dense="dense">
+            <template v-slot:append>
+              <q-icon name="mail" color="black" align="right" />
+            </template>
+          </q-input>
 
           <q-input
-            style="width: 100%"
+            mask="(##) ##### - ####"
+            fill-mask
+            color="black"
+            bg-color="grey-4"
+            label-color="grey-7"
+            class="col-md-6 col-sm-12 col-xs-12"
+            label="Digite seu telefone:"
+            :rules="[(val) => (val && val.length >= 11) || 'Telefone é obrigatório!']"
+            v-model="telefone_contato"
+            unmasked-value
+            outlined
+            :dense="dense">
+            <template v-slot:append>
+              <q-icon name="phone" color="black" align="right" />
+            </template>
+          </q-input>
+
+          <q-input
             bg-color="grey-4"
             color="black"
             label="Digite sua solicitação:"
@@ -79,15 +67,15 @@
             v-model="mensagem_contato"
             filled
             type="textarea"
+            class="col-12"
           />
           <q-toggle
             color="green"
             label="Aceito receber mensagens no Whatsapp."
             v-model="Zapzap"
             val="green"
-            class="label col-12"
-          />
-          <div class="row">
+            class="label col-12"/>
+          <div class="col-12">
             <q-btn
               type="submit"
               :loading="submitting"
@@ -104,7 +92,7 @@
         </q-form>
       </div>
 
-      <div id="social" class="col ">
+      <div id="social" class="col-md-6 col-sm-12 gt-sm">
         <p class="text-h4">Redes sociais:</p>
         <div class="btn-social">
           <q-btn
@@ -155,13 +143,6 @@
       </div>
     </div>
     <div>
-      <a
-        href="https://google.com"
-        target="_blank"
-        class="absolute-bottom text-grey-7 q-mb-sm rodape"
-        align="center"
-        >Termos de política e privacidade</a
-      >
     </div>
   </q-page>
 </template>

@@ -52,9 +52,21 @@
       <q-footer class="footer row q-pa-xl">
         <q-toolbar class="justify-between">
             <div class="q-pl-xl ">
-              <div class="text-h5 q-pb-md">MH2 Modas</div>
-                <div><p><strong>Email: </strong>mh2modas@gmail.com</p></div>
-                <div><p><strong>Telefone: </strong>41 99786-717</p></div>
+              <div class="text-h5 q-pb-md row">
+                MH2 Modas
+                <div class="q-ml-md">
+                  <a type="a" target="_blank" href="https://www.facebook.com/marlanmodas/?ref=pages_you_manage">
+                    <q-img id="icon-rede" src="../img/facebook_logo_square_icon_134009.png"/>
+                  </a>
+                </div>
+                <div class="q-ml-md">
+                  <a type="a" target="_blank" href="https://www.instagram.com/mh2modas/">
+                    <q-img id="icon-rede" src="../img/image_preview.png"/>
+                  </a>
+                </div>
+              </div>
+              <div><p><strong>Email: </strong>mh2modas@gmail.com</p></div>
+              <div><p><strong>Telefone: </strong>41 99786-717</p></div>
             </div>
             <div class="q-pr-xl gt-sm">
               <img src="../img/bombaster3.png" class="img-logo-ft" spinner-color="white"/>

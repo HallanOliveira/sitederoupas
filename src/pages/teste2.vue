@@ -30,7 +30,6 @@
         </div>
         </div>
 
-
       <q-separator class="q-mb-md" />
 
       <div class="row justify-center q-pb-lg">

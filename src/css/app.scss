@@ -81,9 +81,7 @@ background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3
 }
 
 #social{
-    top: 30px;
     text-align: center;
-    width: 49%;
 }
 .btn-social{
     padding: 20px 20px;
@@ -120,6 +118,11 @@ background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3
 
 .btn-whats{
   z-index: 9999;
+}
+
+#icon-rede{
+  height: 30px;
+  width: 30px;
 }
 
 @media(max-width: 1300px){
