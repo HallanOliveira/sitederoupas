@@ -1,32 +1,16 @@
 <template>
-  <q-page>
-    <!-- SideBar filters Lateral -->
-    <div class="row">
-      <div class="side-filter col-2 gt-sm">
-        <div class="text-h4 text-black text-center q-mt-md">Filtros:</div>
-        <div class="q-pa-lg">
-          <q-input v-model="text" filled autogrow label="Busque por descrição:" color="black" class="q-mb-lg">
-           <template v-slot:append>
-             <q-icon name="search" />
-           </template>
-          </q-input>
-          <q-select filled v-model="model" :options="options" label="Ordenar por:" class="q-mb-lg"/>
-          <q-option-group
-            :options="options3"
-            type="checkbox"
-            v-model="options2"
-          />
-        </div>
-      </div>
-
+  <div>
       <!--cards for desktop-->
-      <div class="row col-10 justify-center gt-sm">
-        <q-card
-          id="estoque"
-          class="my-card col-md-3 col-lg-4 q-ma-lg"
+      <div class="row">
+        <div class="col-xs-12 col-md-3"
+          align="Center"
           v-for="(post, index) of posts.slice(v1, v2)"
           :key="index"
           row-key="post.id">
+        <q-card
+          id="estoque"
+          class="card q-ma-lg"
+        >
           <q-img :src="post.url">
             <div class="absolute-bottom">
               <div class="text-h6">
@@ -44,34 +28,9 @@
           </div>
         </q-card>
         </div>
-
-        <!--cards for mobile-->
-        <div class="row col-12 justify-center lt-md">
-          <q-card
-            id="estoque"
-            class="my-card col-12 q-ma-lg"
-            v-for="(post, index) of posts.slice(v1, v2)"
-            :key="index"
-            row-key="post.id">
-            <q-img :src="post.url">
-              <div class="absolute-bottom">
-                <div class="text-h6">
-                  ID: {{ post.id }}
-                  <br />
-                  Cont: {{ index }}
-                </div>
-                <div class="text-subtitle2">{{ post.title }}</div>
-              </div>
-            </q-img>
-            <div>
-              <q-card-actions class="col-12 justify-center">
-                <q-btn flat>ver mais</q-btn>
-              </q-card-actions>
-            </div>
-          </q-card>
         </div>
-      </div>
-    
+
+
       <q-separator class="q-mb-md" />
 
       <div class="row justify-center q-pb-lg">
@@ -85,7 +44,7 @@
         />
       </div>
 
-  </q-page>
+  </div>
 </template>
 
 <script>
@@ -119,7 +78,7 @@ export default {
 
   //executa ao acessar a pagina
   mounted() {
-    this.getPosts();   
+    this.getPosts();
   },
 
   //consome os dados da API

@@ -1,6 +1,5 @@
 <template>
-<q-layout>
- <q-page-container>
+ <q-page>
     <div class="row q-pt-xl">
       <div class="col" style="width: 50%">
         <q-form
@@ -164,8 +163,7 @@
         >Termos de política e privacidade</a
       >
     </div>
-  </q-page-container>
-</q-layout>
+  </q-page>
 </template>
 
 <script>

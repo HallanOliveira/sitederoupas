@@ -1,7 +1,8 @@
 <template>
   <div>
+     <div>
     <div class="gt-sm">
-      <q-carousel id="carrosel1" class="shadow-5"
+      <q-carousel class="shadow-5"
         animated
         v-model="slide"
         navigation
@@ -12,14 +13,8 @@
         transition-next="slide-left"
         @mouseenter="autoplay = false"
         @mouseleave="autoplay = true"    >
-          <q-carousel-slide :name="1" img-src="../img/banner1.jpg"/>
-          <q-carousel-slide :name="2" img-src="../img/curiosidades-sobre-o-valentines-day.jpg">
-          <p class="text-h3 text-white q-pt-xl absolute-center text-center">
-            Dia dos namorados 
-            <br> 
-            é na MH Modas!
-          </p>
-        </q-carousel-slide>
+          <q-carousel-slide :name="1" img-src="../img/banner5.jpg"/>
+          <q-carousel-slide :name="2" img-src="../img/banner6.jpg"/>
       </q-carousel>
     </div>
 
@@ -27,9 +22,9 @@
       <strong>Nossos produtos:</strong>
     </div>
 
-    <div class="justify-around flex q-mt-lg">
-      <div class="category-card">
-        <q-card class="my-card shadow-10">
+    <div class="row q-pa-md">
+      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+        <q-card class="shadow-10 card">
           <q-card-section>
             <q-img src="../img/blusinha.jpeg"/>
           </q-card-section>
@@ -39,8 +34,8 @@
         </q-card>
       </div>
 
-      <div class="category-card">
-        <q-card class="my-card shadow-10">
+      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+        <q-card class="shadow-10 card">
           <q-card-section>
             <q-img src="../img/calça.jpg"/>
           </q-card-section>
@@ -50,8 +45,8 @@
         </q-card>
       </div>
 
-      <div class="category-card">
-        <q-card class="my-card shadow-10">
+      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+        <q-card class="shadow-10 card">
           <q-card-section>
             <q-img src="../img/short.jpg"/>
           </q-card-section>
@@ -61,8 +56,8 @@
         </q-card>
       </div>
 
-      <div class="category-card">
-        <q-card class="my-card shadow-10">
+      <div class="col-xs-12 col-md-3 q-pa-md" align="Center">
+        <q-card class="shadow-10 card">
           <q-card-section>
             <q-img src="../img/1528528031_1GG.webp"/>
           </q-card-section>
@@ -72,6 +67,7 @@
         </q-card>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

@@ -2,19 +2,17 @@
 q-avatar {
     width: 300px
 }
+.page{
+  position: absolute;
+  bottom: 0;
+}
 .default {
     background-color: $background-general;
     font-size: 28pt;
 }
-.menu-mobile{
-    min-width: 200px;
-}
-.q-item.q-router-link--active > .menu-mobile{
-    color: pink;
-}
-.toolBarTop{    
+.toolBarTop{
     background-color: $gold;
-    height: 130px;
+    height: 100px;
 }
 .menu{
     background-color:$purple;
@@ -30,38 +28,16 @@ div#id1 {
     font: sans-serif;
     color: $gold;
 }
-.separator-menu{
-    background-color: $gold;
-}
 #pagina{
     width: 100%;
-}
-
-.q-carousel {
-    height: 800px;
-}
-.q-card{
-    width: 330px !important;
-    height: 100%;
 }
 
 .title{
     width: 100%;
     justify-content: space-around;
 }
-
-.my-card{
-  width: 100%;
-  max-width: 350px;
-  
-}
 .q-input{
     width: 30%;
-}
-.category-card{
-    max-width: 400px;
-    max-height: 20%;
-    padding: 10px 10px;
 }
 .example-item {
     height: 100px;
@@ -91,7 +67,7 @@ background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3
   border-radius: 3px;
   cursor: pointer;
   transition: background 0.1s;
- 
+
 }
 #logo{
     width: 30px;
@@ -115,3 +91,57 @@ background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3
 .label{
     font-size: 16px;
 }
+.img-logo{
+  height: 90px;
+  width: 150px;
+
+}
+
+.img-logo-ft{
+  height: 110px;
+  width: 200px;
+}
+
+.card{
+  width: 300px;
+}
+
+.menu-desktop{
+  font-size: 25px;
+}
+
+.footer{
+  background-color: rgb(245, 245, 245);
+  color: rgb(78, 29, 44);
+  min-height: 150px;
+  box-shadow: 5px 5px 1em black;
+  z-index: 100;
+}
+
+.btn-whats{
+  z-index: 9999;
+}
+
+@media(max-width: 1300px){
+  .card{
+    width: 250px;
+  }
+}
+
+@media(max-width: 584px){
+  .menu-desktop{
+    font-size: 15px;
+  }
+}
+@media(max-width: 500px){
+  .menu-desktop{
+   font-size: 10px;
+  }
+}
+@media(min-width: 500px) and (max-width: 1024px){
+  .card{
+    width: 350px;
+  }
+}
+
+

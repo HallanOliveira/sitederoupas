@@ -1,5 +1,5 @@
 <template>
-  <q-page padding>
+  <q-page >
     <div class="row q-mt-lgs" style="height: 500px; width: 100%">
       <div class="col" style="width: 50%">
         <q-form
