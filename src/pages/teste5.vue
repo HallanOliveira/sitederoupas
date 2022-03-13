@@ -25,8 +25,8 @@
           <q-btn class="col-md-3" color="grey" label="Calcular" @click="searchCEP()" />
         </div>
         <div class="q-pl-md col-md-6 row">
-          <div class="col-md-6">{{ result.uf }}/{{ result.localidade }}</div>
-          <div class="col-md-6">{{ result.cep }}</div>
+          <div class="col-md-6">{{ cidade }}</div>
+          <div class="col-md-6">{{ codigoPostal }}</div>
         </div>
       </div>
       <div class="q-pt-md">
@@ -45,16 +45,19 @@ export default {
         url_cep: "https://viacep.com.br/ws/",
         cep: "",
         type: "json",
-        result: [],
+        cidade: '',
+        codigoPostal: '',
       };
     },
     methods: {
       searchCEP(){
-        var teste = [];
         let cep = this.cep.replace('-','')
         fetch(this.url_cep + '/' + cep + '/' + this.type)
           .then(response => response.json())
-          .then(data => (this.result = data))
+          .then(data => (
+            this.cidade = data.uf + '/' +data.localidade,
+            this.codigoPostal = data.cep
+          ))
       },
     }
 }
