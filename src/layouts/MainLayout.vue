@@ -9,7 +9,7 @@
           </div>
           <div class="menu-desktop">
             <q-list class="row col-12">
-              <q-item v-close-popup clickable to="/~">
+              <q-item v-close-popup clickable to="/home">
                 <q-item-section><strong>Home</strong></q-item-section>
               </q-item>
 

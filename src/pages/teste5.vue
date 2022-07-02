@@ -49,6 +49,9 @@ export default {
         codigoPostal: '',
       };
     },
+    props:{
+      title: 'string',
+    },
     methods: {
       searchCEP(){
         let cep = this.cep.replace('-','')

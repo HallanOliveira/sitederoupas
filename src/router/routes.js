@@ -1,10 +1,10 @@
 
 const routes = [
   {
-    path: '',
+    path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/~', component: () => import('pages/Index.vue') },
+      { path: '/home', component: () => import('pages/Index.vue') },
       { path: 'rota01.vue', component: () => import('pages/rota01.vue') },
       { path: 'teste2', component: () => import('pages/teste2.vue') },
       { path: 'teste3', component: () => import('pages/teste3.vue') },
@@ -17,7 +17,7 @@ const routes = [
     path: '/estoque',
     component: () => import('layouts/testeLayout.vue'),
     children: [
-      
+
     ]
   },
 

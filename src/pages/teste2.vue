@@ -11,19 +11,14 @@
           id="estoque"
           class="card q-ma-lg"
         >
-          <q-img :src="post.url">
+          <q-img src="https://via.placeholder.com/600/f66b97">
             <div class="absolute-bottom">
-              <div class="text-h6">
-                ID: {{ post.id }}
-                <br />
-                Cont: {{ index }}
-              </div>
               <div class="text-subtitle2">{{ post.title }}</div>
             </div>
           </q-img>
           <div class="row">
             <q-card-actions class="col-12 justify-center">
-              <q-btn class="col-12"  @click="details()" flat>ver mais</q-btn>
+              <q-btn class="col-12" @click="details()" flat>ver mais</q-btn>
             </q-card-actions>
           </div>
         </q-card>
@@ -47,13 +42,15 @@
 </template>
 
 <script>
-import api from "../services/api";
+import api from "../services/apiService";
 import Index from './Index.vue';
 export default {
   components: { Index },
   name: "teste2",
   data() {
     return {
+      //imagem do post
+
       //pagina atual
       current: 1,
 
@@ -85,6 +82,7 @@ export default {
     getPosts() {
       api.get().then((res) => {
           this.posts = res.data;
+          console.log(this.posts)
         })
         .catch((err) => {
           console.log(err);
